@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.SwingNode?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <ToolBar onMouseDragged="#onDragged" onMousePressed="#onDrag" prefHeight="45.0" prefWidth="1280.0" styleClass="background" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <TabPane layoutY="50.0" prefHeight="490.0" prefWidth="320.0" styleClass="tab-header-area" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <tabs>
+            <Tab text="Profile">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="exchangeListView" editable="true" prefHeight="386.0" prefWidth="320.0" styleClass="space" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <AnchorPane layoutY="377.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="75.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <ComboBox layoutX="10.0" layoutY="10.0" prefWidth="150.0" promptText="Exchange" />
+                              <ComboBox layoutX="10.0" layoutY="40.0" prefHeight="25.0" prefWidth="70.0" promptText="Coin" />
+                              <ComboBox layoutX="90.0" layoutY="40.0" prefHeight="25.0" prefWidth="70.0" promptText="Coin" />
+                              <CheckBox layoutX="187.0" layoutY="14.0" mnemonicParsing="false" text="Load" />
+                              <Button layoutX="255.0" layoutY="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" text="ADD" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Controls">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Pane fx:id="chartPane" layoutX="320.0" layoutY="50.0" prefHeight="490.0" prefWidth="960.0" styleClass="space" AnchorPane.bottomAnchor="180.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <SwingNode fx:id="chartSwingNode" />
+         </children>
+      </Pane>
+      <TabPane layoutY="540.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="960.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="320.0">
+         <tabs>
+            <Tab id="" closable="false" text="Console-Primary">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="151.0" prefWidth="960.0">
+                     <children>
+                        <TextArea editable="false" prefHeight="150.0" prefWidth="960.0" promptText="This textarea is used to post primary, upfront, numerical, and user-induced action." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Debug-Secondary">
+               <content>
+                  <AnchorPane minWidth="0.0" prefHeight="151.0" prefWidth="960.0">
+                     <children>
+                        <TextArea maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="960.0" promptText="This textarea is used to post secondary, background, debug, and non-user actions." styleClass="text-area" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <AnchorPane layoutX="960.0" layoutY="540.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="320.0" styleClass="space" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="20.0" prefWidth="45.0" styleClass="space" text="\\uF2D0" AnchorPane.rightAnchor="45.0">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Button>
+      <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonClose" prefHeight="20.0" prefWidth="45.0" styleClass="space" text="X" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

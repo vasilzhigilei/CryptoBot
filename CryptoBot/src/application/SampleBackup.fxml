@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.SwingNode?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <center>
+      <Pane BorderPane.alignment="CENTER">
+         <children>
+            <SplitPane dividerPositions="0.745125348189415" orientation="VERTICAL">
+              <items>
+                <AnchorPane minHeight="532.0" minWidth="1280.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="540.0" prefWidth="1280.0">
+                          <items>
+                            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="45.0" prefWidth="1280.0">
+                                 <children>
+                                    <ToolBar onMouseDragged="#onDragged" onMousePressed="#onDrag" prefHeight="45.0" prefWidth="1280.0" styleClass="background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <items>
+                                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonClose" prefHeight="20.0" prefWidth="45.0" styleClass="space" text="X" translateX="1227.0" translateY="-13.0">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                          </Button>
+                                          <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="20.0" prefWidth="45.0" styleClass="space" text="\\uF2D0" translateX="1133.0" translateY="-13.0">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                          </Button>
+                                      </items>
+                                    </ToolBar>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="495.0" prefWidth="1280.0">
+                                 <children>
+                                    <SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="495.0" prefWidth="1280.0">
+                                      <items>
+                                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="495.0" prefWidth="320.0">
+                                             <children>
+                                                <TabPane prefHeight="495.0" prefWidth="320.0" styleClass="tab-header-area" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <tabs>
+                                                    <Tab text="Profile">
+                                                      <content>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                               <children>
+                                                                  <ListView fx:id="exchangeListView" editable="true" prefHeight="377.0" prefWidth="320.0" styleClass="space" />
+                                                                  <AnchorPane layoutY="377.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="75.0" prefWidth="320.0">
+                                                                     <children>
+                                                                        <ComboBox layoutX="10.0" layoutY="10.0" prefWidth="150.0" promptText="Exchange" />
+                                                                        <ComboBox layoutX="10.0" layoutY="40.0" prefHeight="25.0" prefWidth="70.0" promptText="Coin" />
+                                                                        <ComboBox layoutX="90.0" layoutY="40.0" prefHeight="25.0" prefWidth="70.0" promptText="Coin" />
+                                                                        <CheckBox layoutX="187.0" layoutY="14.0" mnemonicParsing="false" text="Load" />
+                                                                        <Button layoutX="255.0" layoutY="10.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" text="ADD" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </children>
+                                                            </AnchorPane>
+                                                      </content>
+                                                    </Tab>
+                                                    <Tab text="Controls">
+                                                      <content>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                                      </content>
+                                                    </Tab>
+                                                  </tabs>
+                                                </TabPane>
+                                             </children>
+                                          </AnchorPane>
+                                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="495.0" prefWidth="960.0">
+                                        	<Pane fx:id="chartPane" prefHeight="495.0" prefWidth="960.0" styleClass="space" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                        		<children>
+            										<SwingNode fx:id="chartSwingNode" />
+            									</children>
+            										</Pane>
+                                        </AnchorPane>
+                                      </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="180.0" minWidth="1280.0" prefHeight="180.0" prefWidth="1280.0">
+                     <children>
+                        <SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="180.0" prefWidth="1280.0">
+                          <items>
+                            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="960.0">
+                                 <children>
+                                    <TabPane prefHeight="180.0" prefWidth="960.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <tabs>
+                                        <Tab id="" closable="false" text="Console-Primary">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <TextArea editable="false" prefHeight="150.0" prefWidth="960.0" promptText="This textarea is used to post primary, upfront, numerical, and user-induced action." />
+                                                   </children>
+                                                </AnchorPane>
+                                          </content>
+                                        </Tab>
+                                        <Tab text="Debug-Secondary">
+                                          <content>
+                                            <AnchorPane minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <TextArea maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="960.0" promptText="This textarea is used to post secondary, background, debug, and non-user actions." styleClass="text-area" />
+                                                   </children>
+                                                </AnchorPane>
+                                          </content>
+                                        </Tab>
+                                      </tabs>
+                                    </TabPane>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="320.0" styleClass="space" />
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

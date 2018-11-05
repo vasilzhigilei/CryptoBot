@@ -1,0 +1,55 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.background {
+	-fx-background-color: #2E3337; /* darkest dark */
+}
+
+.tab-pane .tab-header-area .tab-header-background{
+	-fx-background-color: #2E3337; /* darkest dark */
+}
+
+.tab{
+	-fx-background-color: #3b4045; /* medium dark */
+}
+
+.tab .tab-label {
+	-fx-text-fill: #bac0c4; /* light */
+}
+
+.tab:selected {
+	-fx-background-color: #42474d; /* lightest dark */
+}
+
+.tab:selected .tab-label{
+	-fx-text-fill: #e3e6e8; /* lightest light */
+}
+
+.text-area {
+	-fx-text-fill: #2E3337 /* darkest dark */
+}
+.text-area .content {
+	-fx-background-color: #e3e6e8; /* lightest light */
+}
+
+.space {
+	-fx-text-fill: #2E3337; /* darkest dark */
+	-fx-background-color: #e3e6e8; /* lightest light */
+}
+
+.button {
+	-fx-text-fill: #2E3337; /* darkest dark */
+	-fx-background-color: #e3e6e8; /* lightest light */
+}
+
+.status-Offline {
+	-fx-text-fill: #2D3236; /* pretty dark if not most dark */
+	-fx-background-color: #CE5051; /* red, same as chart line, old red: DF202D */
+}
+
+.status-Online {
+	-fx-text-fill: #2D3236; /* pretty dark if not most dark */
+	-fx-background-color: #00B31B; /* green */
+}
+
+.split-pane .split-pane-divider {
+	-fx-background-color: #bac0c4; /* standard light */
+}
