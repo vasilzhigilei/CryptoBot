@@ -36,7 +36,7 @@ This currently blank pane is intended to display processes going on in the progr
 More Information
 ----------------
 
-This program is not going to be limited to only cryptocurrency exchanges. If an exchange has both public and private API, it will be possible to add the exchange to the program database.
+This program is not intended to be limited to only cryptocurrency exchanges. If an exchange has both public and private API, it will be possible to add the exchange to the program database.
 
 History
 -------
